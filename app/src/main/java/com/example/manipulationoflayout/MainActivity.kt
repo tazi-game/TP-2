@@ -17,6 +17,9 @@ class MainActivity : AppCompatActivity() {
             "Morbihan",
         )
 
+        for (i in 0 until bretton_department_list.size) {
+            bretton_department_list[i] = "${bretton_department_list[i]} - Bretagne"
+        }
         val adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, bretton_department_list)
         val listView: ListView = findViewById<ListView>(R.id.my_listView)
         listView.adapter = adapter
